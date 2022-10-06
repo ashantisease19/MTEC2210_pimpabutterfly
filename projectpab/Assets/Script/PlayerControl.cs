@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class PlayerControl : MonoBehaviour
 {
+
 	public Transform otherObject;
 	private float speed;
+	public GameManager gm;
 	// Start is called before the first frame update
 	void Start()
 	{
@@ -38,6 +40,7 @@ public class PlayerControl : MonoBehaviour
 	{
 		if (collision.gameObject.tag -- "Coin" 
 		{
+			gm.IncrementScore(1);
 			Destroy(collision.gameObject);
 		}
 

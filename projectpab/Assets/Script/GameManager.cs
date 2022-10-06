@@ -13,11 +13,11 @@ public class GameManager : MonoBehaviour
        
     InvokeRepeating("SpawnItem", 0, 2);
     }
-    
+  
     // Update is called once per frame
     void Update()
     {
-        
+        scoreText.text = score.ToString();
     }
     public void SpawnItem()
     {
