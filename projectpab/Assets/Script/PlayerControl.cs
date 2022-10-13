@@ -46,7 +46,6 @@ public class PlayerControl : MonoBehaviour
 
 		if (collision.gameObject.tag == "Hazard")
 		{
-
 			Destroy(gameObject);
 
         }		
