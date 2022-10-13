@@ -1,23 +1,27 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class GameManager : MonoBehaviour
 {
-    public GameObject trashPrefab;
+    public int score = 0;
+    public GameObject[] trashPrefab;
     public Transform leftTran;
     public Transform rightTran;
+
+    public TextMeshPro scoreText;
+
     // Start is called before the first frame update
     void Start()
     {
-       
-    InvokeRepeating("SpawnItem", 0, 2);
+        InvokeRepeating("SpawnItem", 0, 2);
     }
   
     // Update is called once per frame
     void Update()
     {
-        scoreText.text = score.ToString();
+        scoreText.text = "Score: " + score.ToString();
     }
     public void SpawnItem()
     {
@@ -25,7 +29,13 @@ public class GameManager : MonoBehaviour
 
        Vector2 spawnPos = new Vector2(rndXValue, leftTran.position.y);
 
-       Instantiate(trashPrefab, spawnPos, Quaternion.identity );
+       int index = Random.Range(0, trashPrefab.Length);
+       Instantiate(trashPrefab[index], spawnPos, Quaternion.identity);
     }
-}
+    public void IncrementScore(int value)
+    {
+        score += value;
 
+    }
+    
+}

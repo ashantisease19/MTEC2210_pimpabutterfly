@@ -1,7 +1,9 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
 public class PlayerControl : MonoBehaviour
 {
-
-	public Transform gameObject;
 	private float speed;
 	public GameManager gm;
 	// Start is called before the first frame update
@@ -33,7 +35,8 @@ public class PlayerControl : MonoBehaviour
 		}
 		transform.Translate(speed * Time.deltaTime, 0, 0);
 	}
-	private void OnTriggerEnter2D(Collider2D collider) 
+
+	private void OnTriggerEnter2D(Collider2D collision) 
 	{
 		if (collision.gameObject.tag == "Coin")
 		{
