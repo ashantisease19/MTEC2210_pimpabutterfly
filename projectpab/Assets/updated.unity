@@ -757,8 +757,8 @@ MonoBehaviour:
   - {fileID: 874904949667256325, guid: 0a7a5bfb686a3c44792da9443f48c8e0, type: 3}
   - {fileID: 874904949667256325, guid: 0a7a5bfb686a3c44792da9443f48c8e0, type: 3}
   - {fileID: 2735206791775854131, guid: f0ceecaeff9b2394f8b478af1248f419, type: 3}
-  - {fileID: 2735206791775854131, guid: f0ceecaeff9b2394f8b478af1248f419, type: 3}
-  - {fileID: 874904949667256325, guid: 0a7a5bfb686a3c44792da9443f48c8e0, type: 3}
+  - {fileID: 8197455889461919689, guid: 995c1beb66761e149945c7ce10ede4ef, type: 3}
+  - {fileID: 8197455889461919689, guid: 995c1beb66761e149945c7ce10ede4ef, type: 3}
   leftTran: {fileID: 1385438054}
   rightTran: {fileID: 486368070}
   scoreText: {fileID: 207349118}

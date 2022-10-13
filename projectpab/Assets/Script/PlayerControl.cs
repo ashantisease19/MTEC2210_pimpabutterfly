@@ -54,7 +54,12 @@ public class PlayerControl : MonoBehaviour
 			Destroy(gameObject);
 
         }		
-		
+		if (collision.gameObject.tag == "Theme")
+        {
+			Destroy(collision.gameObject);
+			Destroy(gameObject);
+			Debug.Log("Theme Changed :)");
+        }
 	}
 }
  
