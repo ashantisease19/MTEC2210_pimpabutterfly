@@ -1,19 +1,13 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
 public class PlayerControl : MonoBehaviour
 {
 
-	public Transform otherObject;
+	public Transform gameObject;
 	private float speed;
 	public GameManager gm;
 	// Start is called before the first frame update
 	void Start()
 	{
 		Debug.Log(transform.position.x);
-	   
-			
 
 
 	}
@@ -27,26 +21,33 @@ public class PlayerControl : MonoBehaviour
 		if (Input.GetKey(KeyCode.A))
 		{
 			speed = -10;
-		} else if (Input.GetKey(KeyCode.D))
+		}
+		else if (Input.GetKey(KeyCode.D))
 		{
+
 			speed = 10;
-		} else
+		}
+		else
 		{
 			speed = 0;
 		}
 		transform.Translate(speed * Time.deltaTime, 0, 0);
 	}
-	private void OnTriggerEnter2D(Collider 2D collision)
+	private void OnTriggerEnter2D(Collider2D collider) 
 	{
-		if (collision.gameObject.tag -- "Coin" 
+		if (collision.gameObject.tag == "Coin")
 		{
 			gm.IncrementScore(1);
 			Destroy(collision.gameObject);
 		}
 
-		if (collision.gameObject.tag -- "Hazard") 
+		if (collision.gameObject.tag == "Hazard")
 		{
+
 			Destroy(gameObject);
-		}
+
+        }		
+		
 	}
 }
+ 
